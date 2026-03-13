@@ -1,0 +1,50 @@
+report:
+AI- based semantic image segmentation using u-net(pytorch);
+we went to google collab website to create segmentation ai we planned to start with dataset -> model-> training ->prediction->evaluation    
+Here we go, we installing ai libraries ( pytorch , torchvision , segmentation-models-pytorch ) we import libraries , In this project , we implementated an 
+AI-based semantic segmentation system using the U-Net architecture with PyTorch. The system takes an image as input and predicts the object class for every pixel in the image . tools and technologies we implemented in this  OpenCV,numpy,matplotlib,googlecolab.
+=>system arhitecture.
+-> The overall workflow of the system is as follows:
+Install required libraries.
+Import deep learning and image processing libraries.
+Create a U-Net segmentation model.
+Prepare dataset and masks.
+Train the model using a training loop.
+Generate predictions on test images.
+Evaluate the segmentation using IoU metric.
+Save the trained model.
+=>model architecture
+project uses the U-Net architecture, which is widely used for semantic segmentation tasks.
+U-Net consists of two main parts:
+Encoder (Contracting Path)
+Extracts features from the input image.
+Uses convolution layers and pooling operations.
+In our model, the encoder used is ResNet34 pretrained on ImageNet.
+Decoder (Expanding Path)
+Reconstructs the image segmentation map.
+Uses upsampling layers to recover spatial resolution.
+Combines low-level and high-level features using skip connections.
+=> Dataset Preparation
+To train the model, two types of data are required:
+Input Images
+These are the original images used for training.
+Segmentation Masks
+A mask is an image where each pixel value represents a class label.
+=> In this project:
+Images were resized to 256 × 256 pixels
+Masks were also resized to 256 × 256 pixels
+Images were normalized to improve model performance.
+=>training process
+forward pass -> loss calculation-> crossEtropyless-> backpropagation->weight update
+=>prediction =>visualization => model evaluation => saving the model
+=>conclusion
+In this project, we successfully implemented an AI-based semantic segmentation system using U-Net and PyTorch.
+We learned how to:
+Build deep learning models
+Train segmentation networks
+Process datasets
+Evaluate model performance using IoU
+Save trained models
+This project helped us understand how computer vision and deep learning techniques can be applied to solve complex image analysis problems.
+
+                                          
